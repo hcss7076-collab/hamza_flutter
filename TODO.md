@@ -1,0 +1,4 @@
+- [x] Remove the \_customers list from \_StoresScreenState
+- [x] Remove the \_showAddCustomerDialog method
+- [x] Remove the floating action button from the Scaffold
+- [x] Remove the customer display UI section (heading and list)
