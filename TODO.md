@@ -1,4 +1,4 @@
-- [x] Remove the \_customers list from \_StoresScreenState
-- [x] Remove the \_showAddCustomerDialog method
-- [x] Remove the floating action button from the Scaffold
-- [x] Remove the customer display UI section (heading and list)
+- [x] Add flutter_launcher_icons to dev_dependencies in pubspec.yaml
+- [x] Add flutter_icons configuration in pubspec.yaml
+- [x] Run flutter pub get
+- [ ] Run flutter pub run flutter_launcher_icons:main
