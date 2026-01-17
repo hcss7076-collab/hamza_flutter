@@ -1,0 +1,53 @@
+import 'package:get/get.dart';
+
+class AppTranslations extends Translations {
+  @override
+  Map<String, Map<String, String>> get keys => {
+    'en_US': {
+      'app_title': 'Elite Warehouse',
+      'settings': 'Settings',
+      'profile_picture': 'Profile Picture',
+      'choose_image': 'Choose Image from Gallery',
+      'image_updated': 'Profile picture updated',
+      'image_failed': 'Failed to select image',
+      'theme_settings': 'Theme Settings',
+      'theme_mode': 'Theme Mode',
+      'light': 'Light',
+      'auto': 'Auto',
+      'dark': 'Dark',
+      'app_info': 'App Info',
+      'version': 'Version',
+      'developer': 'Developer',
+      'company': 'Company',
+      'hamzah_alshami': 'Hamzah Alshami',
+      'elite_warehouse': 'Elite Warehouse',
+      'splash_text': 'Hamzah Alshami\nElite Warehouse',
+      'language': 'Language',
+      'english': 'English',
+      'arabic': 'Arabic',
+    },
+    'ar_SA': {
+      'app_title': 'مخزن النخبة',
+      'settings': 'الإعدادات',
+      'profile_picture': 'الصورة الشخصية',
+      'choose_image': 'اختر صورة من المعرض',
+      'image_updated': 'تم تحديث الصورة الشخصية',
+      'image_failed': 'فشل في اختيار الصورة',
+      'theme_settings': 'إعدادات المظهر',
+      'theme_mode': 'وضع المظهر',
+      'light': 'فاتح',
+      'auto': 'تلقائي',
+      'dark': 'داكن',
+      'app_info': 'معلومات التطبيق',
+      'version': 'الإصدار',
+      'developer': 'المطور',
+      'company': 'الشركة',
+      'hamzah_alshami': 'حمزه الشامي',
+      'elite_warehouse': 'مخزن النخبة',
+      'splash_text': 'حمزه الشامي\nمخزن النخبة',
+      'language': 'اللغة',
+      'english': 'الإنجليزية',
+      'arabic': 'العربية',
+    },
+  };
+}

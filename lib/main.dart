@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'login.dart';
 import 'providers/app_provider.dart';
+import 'translations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,18 +24,12 @@ class EliteWarehouse extends StatelessWidget {
       create: (_) => appProvider,
       child: Consumer<AppProvider>(
         builder: (context, provider, child) {
-          return MaterialApp(
+          return GetMaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'مخزن النخبة',
-
-            // دعم اللغة العربية وRTL
-            localizationsDelegates: const [
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: const [Locale('ar')],
-            locale: const Locale('ar'),
+            translations: AppTranslations(),
+            locale: const Locale('ar', 'SA'),
+            fallbackLocale: const Locale('ar', 'SA'),
 
             themeMode: provider.themeMode,
 

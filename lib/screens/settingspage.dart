@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_provider.dart';
@@ -37,7 +38,7 @@ class _SettingsPageState extends State<SettingsPage> {
       builder: (context, appProvider, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('الإعدادات'),
+            title: Text('settings'.tr),
             backgroundColor: Colors.red,
             foregroundColor: Colors.white,
           ),
@@ -46,9 +47,12 @@ class _SettingsPageState extends State<SettingsPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'الإعدادات',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                Text(
+                  'settings'.tr,
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 const SizedBox(height: 24),
 
@@ -60,9 +64,9 @@ class _SettingsPageState extends State<SettingsPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'الصورة الشخصية',
-                          style: TextStyle(
+                        Text(
+                          'profile_picture'.tr,
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
@@ -92,7 +96,7 @@ class _SettingsPageState extends State<SettingsPage> {
                               ElevatedButton.icon(
                                 onPressed: _pickImage,
                                 icon: const Icon(Icons.photo_library),
-                                label: const Text('اختر صورة من المعرض'),
+                                label: Text('choose_image'.tr),
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.green,
                                   foregroundColor: Colors.white,
@@ -159,11 +163,63 @@ class _SettingsPageState extends State<SettingsPage> {
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Text('فاتح', style: TextStyle(fontSize: 12)),
-                            Text('تلقائي', style: TextStyle(fontSize: 12)),
-                            Text('داكن', style: TextStyle(fontSize: 12)),
+                          children: [
+                            Text(
+                              'light'.tr,
+                              style: const TextStyle(fontSize: 12),
+                            ),
+                            Text(
+                              'auto'.tr,
+                              style: const TextStyle(fontSize: 12),
+                            ),
+                            Text(
+                              'dark'.tr,
+                              style: const TextStyle(fontSize: 12),
+                            ),
                           ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 24),
+
+                // Language Settings
+                Card(
+                  elevation: 4,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'language'.tr,
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        ListTile(
+                          leading: const Icon(Icons.language),
+                          title: const Text('العربية'),
+                          trailing: Get.locale?.languageCode == 'ar'
+                              ? const Icon(Icons.check, color: Colors.green)
+                              : null,
+                          onTap: () {
+                            Get.updateLocale(const Locale('ar', 'SA'));
+                          },
+                        ),
+                        ListTile(
+                          leading: const Icon(Icons.language),
+                          title: const Text('English'),
+                          trailing: Get.locale?.languageCode == 'en'
+                              ? const Icon(Icons.check, color: Colors.green)
+                              : null,
+                          onTap: () {
+                            Get.updateLocale(const Locale('en', 'US'));
+                          },
                         ),
                       ],
                     ),
