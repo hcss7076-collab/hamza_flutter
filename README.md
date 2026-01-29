@@ -26,7 +26,7 @@ A few resources to get you started if this is your first Flutter project:
 
 ## صور من التطبيق
 
-![الواجهة الرئيسية](images/h.jpg)
+![الواجهة الرئيسية](images/h.png)
 ![شاشة التسجيل](images/2.jpg)
 ![شاشة الدخول](images/3.jpg)
 
